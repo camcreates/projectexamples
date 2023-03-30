@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta content="ie=edge" http-equiv="x-ua-compatible">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Imagine FSCJ</title><!-- Stylesheets -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet"><!-- Google Fonts-->
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300, 400, 600, 700, 800' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lora:400italic,700italic' rel='stylesheet' type='text/css'>
+  <meta content="https://testforimagine.prismic.io/api" name="prismic-api">
+  <script src="js/ejs-1.0.js">
+  </script>
+  <script src="js/prismic.io-1.0.10.min.js">
+  </script>
+  <script src="js/prismic.io-singlepage-1.0.0.js">
+  </script><!--     Google analytics script -->
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-746044-26', 'auto');
+    ga('send', 'pageview');
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-746044-26']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); _gaq.type = 'text/javascript'; _gaq.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script><!--    End Google analytics script -->
+</head>
+<body>
+  <!-- Prismic queries -->
+  <script data-binding="hsya" type="text/prismic-query">
+    [
+    [:d = at(document.type, "page")]
+    [:d = at(document.tags, ["hsya"])]
+    ]
+  </script> 
+  <script data-binding="mil" type="text/prismic-query">
+    [
+    [:d = at(document.type, "page")]
+    [:d = at(document.tags, ["mil"])]
+    ]
+  </script> 
+  <script data-binding="wkad" type="text/prismic-query">
+    [
+    [:d = at(document.type, "page")]
+    [:d = at(document.tags, ["wkad"])]
+    ]
+  </script> 
+  <script data-binding="fgen" type="text/prismic-query">
+    [
+    [:d = at(document.type, "page")]
+    [:d = at(document.tags, ["fgen"])]
+    ]
+  </script> 
+  <script data-binding="all" type="text/prismic-query">
+    [
+    [:d = at(document.type, "page")]
+    [:d = at(document.tags, ["all"])]
+    ]
+  </script> 
+  <script data-binding="datesOne" type="text/prismic-query">
+    [
+    [:d = at(document.type, "dates")]
+    [:d = any(document.tags, ["firstcolumn"])]
+    ]
+  </script> 
+  <script data-binding="datesTwo" type="text/prismic-query">
+    [
+    [:d = at(document.type, "dates")]
+    [:d = any(document.tags, ["secondcolumn"])]
+    ]
+  </script> <!-- End Prismic queries -->
+   <!-- Top bar -->
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-7 col-md-4">
+          <a href="http://fscj.edu/" onclick="_gaq.push(['_trackEvent', 'outbound', (param + ' 20171 Header Logo'), 'FSCJ Home']);"><img alt="FSCJ logo" id="fscj-logo" src="images/fscj-logo.png"></a>
+        </div>
+        <div class="col-xs-5 col-md-8 nav-button-container">
+          <a class="btn btn-default btn-apply" href="https://connections.fscj.edu/MemApp2/" onclick="_gaq.push(['_trackEvent', 'outbound', (param + ' 20171 Header Apply Now'), 'Online Application']);" role="button">Apply Now</a> <a class="btn btn-default btn-rfi hidden-sm hidden-xs" data-target="#myModal" data-toggle="modal" href="#" onclick="ga('send','pageview','/rfi-header-' +param);" role="button">Request Info</a>
+        </div>
+      </div>
+    </div>
+  </nav><!-- End top bar -->
+  <!-- Header image pulled in conditionally by Prismic -->
+  <header>
+    [% if (/hsya/.test(loc)) { %] [% hsya.forEach(function(page) { %] <img class="img-responsive" data-src="[%= page.getImageView('page.image', 'main').url %]"> [% }) %] [% } else if (/mil/.test(loc)) { %] [% mil.forEach(function(page) { %] <img data-src="[%= page.getImageView('page.image', 'main').url %]"> [% }) %] [% } else if (/wkad/.test(loc)) { %] [% wkad.forEach(function(page) { %] <img data-src="[%= page.getImageView('page.image', 'main').url %]"> [% }) %] [% } else if (/fgen/.test(loc)) { %] [% fgen.forEach(function(page) { %] <img data-src="[%= page.getImageView('page.image', 'main').url %]"> [% }) %] [% } else { %] [% all.forEach(function(page) { %] <img data-src="[%= page.getImageView('page.image', 'main').url %]"> [% }) %] [% } %]
+  </header><!-- End header image -->
+  <!-- Spotlight programs section -->
+  <div class="row hidden-sm hidden-xs" id="spotlight-row">
+    <div class="col-xs-6 col-sm-3">
+      <a href="http://www.fscj.edu/academics/areas-of-study/business/" onclick="_gaq.push(['_trackEvent', 'outbound', (param + ' 20171 Business'), 'Area of Study - Business']);">
+      <div class="spotlight-container"><img alt="Photo of smiling man" class="spotlight-img" data-src="https://prismic-io.s3.amazonaws.com/testforimagine/77375e864c9ce7d1a34665daf2380a6ffa84d93d_business.jpg" src="https://prismic-io.s3.amazonaws.com/testforimagine/77375e864c9ce7d1a34665daf2380a6ffa84d93d_business.jpg"></div></a>
+      <h6><span aria-hidden="true" class="glyphicon glyphicon-play"></span> <a href="http://www.fscj.edu/academics/areas-of-study/business/" onclick="_gaq.push(['_trackEvent', 'outbound', (param + ' 20171 Business'), 'Area of Study - Business']);">Business</a></h6>
+    </div>
+    <div class="col-xs-6 col-sm-3">
+      <a href="http://www.fscj.edu/academics/areas-of-study/education/early-childhood-education-bs" onclick="_gaq.push(['_trackEvent', 'outbound', (param + ' 20171 Early Childhood Ed'), 'Early Childhood Education B.S.']);">
+      <div class="spotlight-container"><img alt="Photo of smiling woman" class="spotlight-img" data-src="https://prismic-io.s3.amazonaws.com/testforimagine/40511df5c9614721afc3c37e2e2cd8da3053dba8_human-services.jpg" src="https://prismic-io.s3.amazonaws.com/testforimagine/40511df5c9614721afc3c37e2e2cd8da3053dba8_human-services.jpg"></div></a>
+      <h6><span aria-hidden="true" class="glyphicon glyphicon-play"></span> <a href="http://www.fscj.edu/academics/areas-of-study/education/early-childhood-education-bs" onclick="_gaq.push(['_trackEvent', 'outbound', (param + ' 20171 Early Childhood Ed'), 'Early Childhood Education B.S.']);">Early Childhood Ed</a></h6>
+    </div>
+    <div class="col-xs-6 col-sm-3">
+      <a href="http://www.fscj.edu/academics/areas-of-study/health-human-services/human-services-bs" onclick="_gaq.push(['_trackEvent', 'outbound', (param + ' 20171 Human Services'), 'Human Servies B.S.']);">
+      <div class="spotlight-container"><img alt="Photo of smiling woman" class="spotlight-img" data-src="https://prismic-io.s3.amazonaws.com/testforimagine/616118eca5256d150eb51fca4241dc6a5cb6b8e1_early-childhood-ed.jpg" src="https://prismic-io.s3.amazonaws.com/testforimagine/616118eca5256d150eb51fca4241dc6a5cb6b8e1_early-childhood-ed.jpg"></div></a>
+      <h6><span aria-hidden="true" class="glyphicon glyphicon-play"></span> <a href="http://www.fscj.edu/academics/areas-of-study/health-human-services/human-services-bs" onclick="_gaq.push(['_trackEvent', 'outbound', (param + ' 20171 Human Services'), 'Human Servies B.S.']);">Human Services</a></h6>
+    </div>
+    <div class="col-xs-6 col-sm-3">
+      <a href="http://www.fscj.edu/academics/areas-of-study/information-technology/it-security-a-s" onclick="_gaq.push(['_trackEvent', 'outbound', (param + ' 20171 IT Security'), 'IT Security A.S.']);">
+      <div class="spotlight-container"><img alt="Photo of smiling man" class="spotlight-img" data-src="https://prismic-io.s3.amazonaws.com/testforimagine/151ecb280ed6c76c3d7917e360f924bad984c1cb_it-security.jpg" src="https://prismic-io.s3.amazonaws.com/testforimagine/151ecb280ed6c76c3d7917e360f924bad984c1cb_it-security.jpg"></div></a>
+      <h6><span aria-hidden="true" class="glyphicon glyphicon-play"></span> <a href="http://www.fscj.edu/academics/areas-of-study/information-technology/it-security-a-s" onclick="_gaq.push(['_trackEvent', 'outbound', (param + ' 20171 IT Security'), 'IT Security A.S.']);">I.T. Security</a></h6>
+    </div>
+  </div><!-- End spotlight programs -->
+  <div class="row">
+    <!-- Container for main page copy -->
+    <div class="col-md-6" id="main-copy"></div><!-- End container for main page copy -->
+    <!-- Quick info section -->
+    <div class="col-sm-12 col-md-6" id="info-box-container">
+      <div class="row">
+        <div class="col-xs-6 col-md-6 info-box">
+          <a href="http://fscj.edu/academics/areas-of-study" onclick="_gaq.push(['_trackEvent', 'outbound', (param + ' 20171 Areas of Study'), 'Areas of Study']);"><img alt="Icon of graduation cap above text Areas of Study Degrees and Certificaes on dark blue background" src="images/areas-study.png"></a>
+        </div>
+        <div class="col-xs-6 col-md-6 info-box">
+          <a href="http://www.fscj.edu/admissions-aid/admissions" onclick="_gaq.push(['_trackEvent', 'outbound', (param + ' 20171 Getting Started'), 'Admissions']);"><img alt="Numbers 1, 2 and 3 listed by horizontal bars above text getting started steps to enrollment on gray background" src="images/getting-started.png"></a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-6 col-md-6 info-box">
+          <a href="http://www.fscj.edu/admissions-aid/financial-aid" onclick="_gaq.push(['_trackEvent', 'outbound', (param + ' 20171 Paying for College'), 'Financial Aid']);"><img alt="Icon of 1 dollar bill above text paying for college financial aid and scholarships on green background" id="pay-img" src="images/paying.png"></a>
+        </div>
+        <div class="col-xs-6 col-md-6 info-box">
+          <a href="http://www.fscj.edu/academics/class-schedules/" onclick="_gaq.push(['_trackEvent', 'outbound', (param + ' 20171 Class Schedule'), 'Class Schedules']);"><img alt="Icon of abstract list above text class schedule fall 2016 on light blue background" src="images/schedule.png"></a>
+        </div>
+      </div>
+    </div><!-- End quick info section -->
+  </div><!-- Important dates section -->
+  <div class="row" id="dates-row">
+    <div class="col-xs-6 col-md-3"><img alt="Text important dates in white above icon of calendar on blue background" src="images/important-dates.png"></div><!-- Random image container -->
+    <div class="col-xs-6 col-md-3 col-md-push-6" id="add-img"></div><!-- End random image container -->
+    <div class="date-container col-xs-6 col-md-3 col-md-pull-3">
+      [% datesOne.forEach(function(dates) { %]
+      <h5>[%= dates.getText('dates.title') %]</h5>
+      <p>[%= dates.getText('dates.firstdesc') %]<!-- <br>
+            [%= dates.getText('dates.seconddesc') %] --></p>[% }) %]
+    </div>
+    <div class=" date-container col-xs-6 col-md-3 col-md-pull-3">
+      [% datesTwo.forEach(function(dates) { %]
+      <h5>[%= dates.getText('dates.title') %]</h5>
+      <p>[%= dates.getText('dates.firstdesc') %]<!-- <br>
+            [%= dates.getText('dates.seconddesc') %] --></p>[% }) %]
+    </div>
+  </div><!-- End important dates section -->
+  <!-- Footer section -->
+  <footer>
+    <div class="col-md-6 col-md-offset-3">
+      <div class="row">
+        <a href="http://fscj.edu/" onclick="_gaq.push(['_trackEvent', 'outbound', (param + ' 20171 Footer Logo'), 'FSCJ Home']);"><img alt="Imagine FSCJ Logo" src="images/imagine-fscj.png"></a>
+      </div>
+      <div class="row">
+        <p class="tagline-aao">Affordable, accessible <span class="plus-sign">+</span> online</p>
+      </div>
+      <div class="row">
+        <a class="btn btn-default btn-apply" href="https://connections.fscj.edu/MemApp2/" onclick="_gaq.push(['_trackEvent', 'outbound', (param + ' 20171 Footer Apply Now'), 'Online Application']);" role="button">Apply Now</a> <a class="btn btn-default btn-rfi hidden-sm hidden-xs" data-target="#myModal" data-toggle="modal" href="#" onclick="ga('send','pageview','/rfi-footer-' +param);" role="button">Request Info</a>
+      </div>
+    </div>
+  </footer><!-- End footer section -->
+  <!-- Modal -->
+  <div aria-labelledby="myModalLabel" class="modal fade" id="myModal" role="dialog" tabindex="-1">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Request Information</h4>
+        </div>
+        <div class="modal-body">
+          <iframe height="610" src="https://fscj.askadmissions.net/emtinterestpage.aspx?ip=learnmore"></iframe>
+        </div>
+      </div>
+    </div>
+  </div><!-- End Modal -->
+  <script>
+    var loc = window.location.href; //get url
+    var param;
+  </script> 
+  <script src="https://code.jquery.com/jquery-2.2.3.min.js">
+  </script> 
+  <script src="js/get-param.js">
+  </script> 
+  <script src="js/copy.js">
+  </script> 
+  <script src="js/random-img.js">
+  </script> 
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js">
+  </script>
+</body>
+</html>

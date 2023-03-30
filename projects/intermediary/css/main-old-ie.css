@@ -1,0 +1,163 @@
+html, 
+button, 
+input, 
+select, 
+textarea,
+.pure-g [class *= "pure-u"] {
+    /* Set your content font stack here: */
+    font-family: 'Open Sans', sans-serif;
+}
+
+html {
+    background-color: #137299;
+}
+body {
+    background-color: #fff;
+}
+.l-box {
+    padding: 2em;
+}
+.is-center {
+    text-align: center;
+}
+#logo-container img {
+    width: 75%;
+    max-width: 640px;
+    max-height: 113px;
+}
+.header .pure-menu {
+    background-color: #137299;
+}
+.photo-box,
+.text-box {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    text-align: center;
+}
+.photo-box img {
+    max-width: 100%;
+    height: auto;
+    min-height: 250px;
+}
+.photo-box {
+    background-color: #000;
+}
+.text-box {
+    background: #fff;
+    color: #272822;
+}
+.message {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    font-weight: 100;
+}
+.text-box-head {
+    font-family: 'Open Sans', sans-serif;
+    color: #272822;
+    padding-bottom: 0.2em;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    font-size: 2em;
+    text-transform: uppercase;
+    margin: 0;
+}
+.text-box-subhead {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.1em;
+    font-size: 1.5em;
+}
+.footer {
+    background: #137299;
+    color: #fff;
+    text-align: center;
+    padding: 2em;
+    font-size: 1em;
+}
+.footer a {
+    color: #fff;
+}
+.btn {
+    font-family: 'Open Sans', sans-serif;
+    color: #137299;
+    background: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 1em 2em 1em 2em;
+    margin: .5em;
+    text-decoration: none;
+    border: #137299 4px solid;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.avail:hover,
+.avail:focus,
+.avail:active {
+    background-color: #137299;
+    color: #fff;
+    font-weight: 600;
+    border: #137299 4px solid;
+    cursor: pointer;
+}
+.unavail:hover,
+.unavail:focus,
+.unavail:active {
+    background-color: #959291;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    cursor: default;
+}
+.unavail:hover span {
+    display: none;
+}
+.unavail:hover:before {
+    content: "Application Available August 2015";
+}
+.crossfade > img { 
+    max-width: 100%;
+    min-height: 250px;
+    top: 0px;
+    left: 0px;
+    color: transparent;
+    opacity: 0;
+    z-index: 0;
+    -webkit-backface-visibility: hidden;
+}
+.crossfade > img:first-child + img  {
+    position: absolute;
+
+}
+.crossfade > img:first-child + img +img {
+    position: absolute;
+
+}
+@media (min-width: 56em) {
+    .photo-box,
+    .text-box {
+        text-align: left;
+    }
+    .photobox {
+        background-color: #000;
+    }
+}
+@media (min-width: 68em) {
+    .message {
+        font-size: 1em;
+        font-weight: 100;
+        padding-right: 20%;
+    }
+    .text-box-head {
+        font-size: 2.5em;
+    }
+    .text-box-subhead {
+        font-size: 1.5em;
+    }
+    .btn {
+        font-size: 1em;
+    }
+}

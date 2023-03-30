@@ -1,0 +1,154 @@
+/*Basic styles*/
+html,body {
+    background: #84d3d8;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 1em;
+}
+
+h3,h4,h5 {
+    font-weight: 700;
+}
+
+a {
+    color: #000;
+    text-decoration: underline;
+}
+
+.white-text {
+    color: #fff;
+/*Date copy is white for mobile*/
+    font-weight: 700;
+}
+
+.body-text {
+    color: #000;
+    text-align: center;
+/*Center copy for mobile*/
+}
+
+.body-text span {
+    font-weight: 700;
+/*Uses a span to bold copy within the body-text class.*/
+}
+
+.white-bg {
+    background: #fff;
+/*White background behind film festival image for mobile*/
+    padding-bottom: 1rem;
+}
+
+.date {
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.5em;
+    text-align: center;
+    margin: 1rem 0 1rem 0;
+}
+
+#address {
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/*Media Queries*/
+
+/* Mobile */
+@media only screen and (max-width: 40em) { 
+#row-two,#img-holder {
+    display: none; /*Hides specified content on small screens */
+}
+}
+
+/* min-width 641px, medium screens */
+@media only screen and (min-width: 40.063em) {
+#row-two,#img-holder {
+    display: block; /*Shows specified content on medium and larger screens*/
+}
+
+#mob-content,#mob-img {
+    display: none; /*Hides specified content on medium and larger screens*/
+}
+
+.date span {
+    color: #84d3d8; /*Day of the week within the date is blue on medium and larger screens*/
+}
+
+#address {
+    text-align: left;
+}
+
+#img-holder { /*Positions the film festival image for medium and larger screens top left*/
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#row-one {
+    background-color: #fff; /*Gives top portion of screen a white background on medium and larger screens*/
+}
+
+#row-two {
+    background-color: #84d3d8; /*Gives bottom portion of screen a blue background on medium and larger screens*/
+}
+
+p {
+    margin: 1rem 0 0; /*Controls position of event detail copy*/
+}
+
+.date {
+    color: #000;
+    font-weight: 700;
+    font-size: 2em;
+    margin: 15rem 0 0 0;
+    text-align: left;
+}
+
+.body-text {
+    text-align: left;
+}
+
+.white-bg {
+    background: none;
+}
+
+.row {
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+}
+}
+
+@media only screen and (min-width: 40.063em) and (max-width: 900px) {
+#img-holder {
+    max-width: 400px; /*Prevents image from overlapping copy on smaller medium screens*/
+}
+
+.date {
+    margin: 12rem 0 0 0; /*Repositions date a bit higher on the screen on smaller medium screens*/
+}
+}
+
+/* min-width 1025px, large screens */
+@media only screen and (min-width: 64.063em) {
+.date {
+    font-size: 3em;
+    margin: 12rem 0 0 -5rem;
+}
+
+p {
+    margin: 1rem 0 0 -5rem; /*Controls position of event detail copy*/
+}
+}
+
+/* min-width 1441px, xlarge screens */
+@media only screen and (min-width: 90.063em) {
+.date {
+    font-size: 3em;
+    margin: 12rem 0 0-15rem; /*Controls position of date copy*/
+}
+
+p {
+    margin: 1rem 0 0 -15rem; /*Controls position of event detail copy*/
+}
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>FSCJ Film Festival</title>
+	<!-- Gets media queries to work -->
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" /> <!-- For better cross-browser consistency -->
+	<link rel="stylesheet" type="text/css" href="css/foundation.css" /> <!-- Foundation grid and styles -->
+	<link rel="stylesheet" type="text/css" href="css/main.css" /> <!-- Custom styles -->
+</head>
+<body>
+
+<div class="row" id="row-one">
+<div class="small-12 medium-6 columns white-bg">
+	<!-- BEGIN image on non-mobile devices -->
+	<img id="mob-img" src="img/filmfest-img.png" alt="Film Festival logo" /> 
+	<!-- END image on non-mobile devices -->
+	</div>
+	<div class="small-12 medium-6 columns end" >
+	<p class="date">
+		<span>Saturday</span><br>February 27, 2016
+	</p>
+	<p id="address">
+		Nathan H. Wilson Center for the Arts | South Campus | Florida State College at Jacksonville</p>
+	<!-- BEGIN main copy on mobile devices -->
+	<div id="mob-content">
+	<p class="body-text">
+		Selected films will be aired starting at 5 p.m.</p>
+		
+		<p class="body-text">For more information, contact Byron Caplan or Dr. Troy Johnson at <span>(904) 646-2031</span></p>
+		<p class="body-text">Festival Registration and Submission: <span><a href="http://www.withoutabox.com/login/14421">withoutabox.com</a></span><br><br>
+		<img src="img/logos.png" alt="FSCJ and Midtown video logos" />
+	</p>
+	</div>
+	<!-- END main copy on mobile devices -->
+</div>
+</div>
+<!-- BEGIN main copy on non-mobile devices -->
+<div class="row" id="row-two">
+	<div class="small-12 medium-6 columns">
+	&nbsp;
+	</div>
+	<div class="small-12 medium-6 columns end">
+	<p class="body-text">
+		Selected films will be aired starting at 5 p.m.</p>
+		<p class="body-text">For more information, contact Byron Caplan or Dr. Troy Johnson at <span>(904) 646-2031</span></p>
+		<p class="body-text">Festival Registration and Submission: <span><a href="http://www.withoutabox.com/login/14421">withoutabox.com</a></span><br><br>
+		<img src="img/logos.png" alt="FSCJ and Midtown video logos" />
+	</p>
+</div>
+</div>
+<!-- END main copy on non-mobile devices -->
+<!-- BEGIN image on mobile devices -->
+<div id="img-holder">
+<img src="img/filmfest-img.png" alt="Film Festival logo" />
+</div>
+<!-- END display the image on mobile devices -->
+
+<!-- Google analytics -->
+<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script> <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-746044-26', 'auto');
+  ga('send', 'pageview');
+
+  var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-746044-26']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+    var ga = document.createElement('script'); _gaq.type = 'text/javascript'; _gaq.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+</script>
+<!-- END Google analytics -->
+</body>
+</html>
