@@ -4,6 +4,10 @@ html {
 body {
     background-color: #fff;
 }
+#main-container {
+    display: flex;
+    flex-wrap: wrap;
+}
 .l-box {
     padding: 2em;
 }
