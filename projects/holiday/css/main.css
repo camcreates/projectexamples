@@ -120,7 +120,7 @@ li {
   width: 100%;
 }
 .modal-image {
-  background: url(/assets/additional/loading.gif) 50% no-repeat;
+  background: url(../assets/additional/loading.gif) 50% no-repeat;
   display: block;
   margin: 0 auto;
 }
