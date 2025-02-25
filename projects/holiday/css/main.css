@@ -17,7 +17,7 @@ body {
   letter-spacing: 2px;
 }
 video { 
-  background: url('https://www.fscj.edu/images/default-source/Discover-FSCJ/MarComm/holiday-app/fireplace-blurred-still.jpg') no-repeat;
+  background: url('../assets/fireplace-blurred-still.jpg') no-repeat;
   background-size: cover;
   height: auto;
   left: 50%;
@@ -120,7 +120,7 @@ li {
   width: 100%;
 }
 .modal-image {
-  background: url(http://blog.teamtreehouse.com/wp-content/uploads/2015/05/loading.gif) 50% no-repeat;
+  background: url(/assets/additional/loading.gif) 50% no-repeat;
   display: block;
   margin: 0 auto;
 }
@@ -140,7 +140,7 @@ li {
   padding: 1em;
   width: 45%;
 }
-.close-button: {
+.close-button {
   margin-bottom: 1em;
 }
 
