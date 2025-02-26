@@ -38,10 +38,9 @@ var monthlyData = [
   }, 
   { "month": "December", "imageUrl": "assets/monthly-images/december.jpg", "copyOne": "<p>Florida State College at Jacksonville was honored to welcome some of our distinguished alumni members who are advocates for higher education and the future of students in our community. Alumni play a critical role in helping FSCJ deliver on our mission and we are proud to have them as partners in our student success efforts.<\/p>", "column": 2 }];
 
-// Parse in page data
+// Store page data
 var myData = monthlyData,
   modalListElements = document.getElementsByClassName("modalMonth");
-  console.log(myData);
 // Generate month lists
 
 $(document).ready(function () {
