@@ -30,6 +30,20 @@ video {
   width: auto;
   z-index: -100;
 }
+#novideo {
+  background: url('../assets/fireplace-blurred-still.jpg') no-repeat;
+  background-size: cover;
+  height: 100%;
+  left: 50%;
+  min-height: 100%;
+  min-width: 100%;
+  position: fixed;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  transition: 1s opacity;
+  width: 100%;
+  z-index: -99;
+}
 img {
   max-width: 100%;
 }

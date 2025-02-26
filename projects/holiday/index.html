@@ -16,6 +16,7 @@
 <body>
   <video controls autoplay loop id="bgvid" poster="assets/fireplace-blurred-still.jpg">
   <source src="assets/fireplace-blurred.mp4" type="video/mp4"></video>
+  <div id="novideo"></div>
   <div class="text-container col-md-6 col-md-offset-3">
     <div class="row">
       <p class="landing intro-text col-sm-12">Join us as we remember some of our great accomplishments from 2017.</p>
@@ -72,6 +73,13 @@
     </script> 
     <script src="js/app.js">
     </script> 
+    <script>
+      var FIREFOX = /Firefox/i.test(navigator.userAgent);
+
+if (FIREFOX) {
+  document.getElementById("bgvid").style.display="none";
+}
+    </script>
   </div>
 </body>
 </html>
