@@ -154,7 +154,7 @@ header {
   background-size: cover;
   -o-background-size: cover;
   background-position: center;
-  background-image: url('https://www.fscj.edu/images/default-source/nacac/nacac-header-bg.jpg');
+  background-image: url('../images/nacac-header-bg.jpg');
   text-align: center;
   color: #fdfdfd;
 }
@@ -164,7 +164,7 @@ header {
   background-size: cover;
   -o-background-size: cover;
   background-position: center;
-  background-image: url('https://www.fscj.edu/images/default-source/nacac/nacac-section-bg.jpg');
+  background-image: url('../images/nacac-section-bg.jpg');
   color: #fdfdfd;
 }
 
